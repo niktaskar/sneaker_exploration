@@ -1,11 +1,22 @@
 body {
-    background-color: #7070a9;
+    background-color: white;
+    /* font-family: Garamond; */
 }
 
 a {
-    color: lightgray;
+    color: black;
 }
 
 #navigation-bar{
     text-align: center;
+    background-color: white;
+    border-bottom: 1px solid silver;
+}
+
+#jumbotron {
+    background-image: url(background4.jpg);
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    height: 440px;
 }
