@@ -1,14 +1,13 @@
 body {
     background-color: white;
-    /* font-family: Garamond; */
+    font-family: monospace;
 }
 
 a {
-    color: black;
+    color: #666;
 }
 
 #navigation-bar{
-    text-align: center;
     background-color: white;
     border-bottom: 1px solid silver;
 }
@@ -19,4 +18,24 @@ a {
     margin: 20px;
     border-radius: 5px;
     height: 440px;
+}
+
+#category-bar {
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+}
+
+.cat-bar-btn {
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.content {
+    margin: 20px;
+}
+
+#content-div {
+    font-size: 69px;
+    text-align: center;
 }

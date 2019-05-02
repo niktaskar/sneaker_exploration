@@ -13,18 +13,36 @@
 
 <body>
     <nav class="navbar navbar-expand-lg container-fluid sticky-top" id="navigation-bar">
-        <a class="navbar-brand" href="index.html">Home</a>
+        <div id="navigation-add" class="col">
+            <form class="form-inline">
+                <input type="button" id="navbar-add" class="form-control" value="Add an item">
+            </form>
+        </div>
+        <a class="navbar-brand col" href="index.html" id="navigation-home">Home</a>
+        <div id="navigation-search" class="col">
+            <form class="form-inline">
+                <input type="search" id="navbar-search" class="form-control" placeholder="Search the site">
+                <input type="button" id="navbar-search" class="form-control" value="Search">
+            </form>
+        </div>
     </nav>
-    <div>
-        <div class="jumbotron jumbotron-fluid" id="jumbotron">
-            <div class="container">
-                <h1 class="display-2">Welcome</h1>
-                <p class="lead">As shoe lovers, we want to help you explore all the shoes out there and help you find
-                    the perfect pair</p>
-            </div>
+    <div class="jumbotron jumbotron-fluid" id="jumbotron">
+        <div class="container">
+            <h1 class="display-2">Welcome</h1>
+            <p class="lead">As shoe lovers, we want to help you explore all the shoes out there and help you
+                find the perfect pair</p>
         </div>
     </div>
-
+    <nav class="navbar navbar-expand-lg container-fluid" id="category-bar">
+        <button href="#" class="cat-bar-btn col form-control">Sneakers</button>
+        <button href="#" class="cat-bar-btn col form-control">Sandals</button>
+        <button href="#" class="cat-bar-btn col form-control">Boots</button>
+        <button href="#" class="cat-bar-btn col form-control">Dress Shoes</button>
+    </nav>
+    <div class="content" id="content-div">
+           
+    </div>
+    <script src="main.js" type="application/javascript"></script>
 </body>
 
 </html>
