@@ -61,6 +61,7 @@ function showSkate() {
 function moreInfo(d) {
   document.getElementById("content-div").innerHTML = " ";
   $.getJSON('https://api.myjson.com/bins/gul64', function(data) {
+    document.getElementById("content-div").innerHTML += '<p class="shoeName">' + data.Shoes[d].brand + " " + data.Shoes[d].name + '</p>'
     document.getElementById("content-div").innerHTML += '<img class="moreInfoImg" src="' + data.Shoes[d].id + '.jpg" alt="' + data.Shoes[d].name + '">'
     document.getElementById("content-div").innerHTML += '<p class="shoePrice">$' + data.Shoes[d].price + '</p>'
     document.getElementById("content-div").innerHTML += '<p class="shoeDesc">' + data.Shoes[d].description + '</p>'

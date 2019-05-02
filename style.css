@@ -48,6 +48,12 @@ a{
   width: 50%;
 }
 
+.shoeName {
+  font-size: 28px;
+  font-weight: bold;
+  font-style: underline;
+}
+
 .shoeDesc {
   font-size: 12px;
 }
