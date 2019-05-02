@@ -40,6 +40,19 @@ a{
     text-align: center;
 }
 
-img {
+.listImg {
   width: 25%;
+}
+
+.moreInfoImg {
+  width: 50%;
+}
+
+.shoeDesc {
+  font-size: 12px;
+}
+
+.shoePrice {
+  font-size: 20px;
+  font-weight: bold;
 }
