@@ -1,20 +1,51 @@
-function showSneakers() {
-  console.log("sneakers");
-  console.log(event.target.id);
+$.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+  console.log(data.Shoes.length);
+  for(var i = 0; i < 32; i++){
+    console.log(data.Shoes[i]);
+    document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+  }
+});
 
-  $.getJSON('https://api.myjson.com/bins/e7m40', function(data) {
-    console.log(data);
+function showSneakers() {
+  document.getElementById("content-div").innerHTML = " ";
+  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+    console.log(data.Shoes.length);
+    for(var i = 0; i < 8; i++){
+      console.log(data.Shoes[i]);
+      document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+    }
   });
 }
 
 function showSandals() {
-  console.log("sandals");
+  document.getElementById("content-div").innerHTML = " ";
+  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+    console.log(data.Shoes.length);
+    for(var i = 8; i < 16; i++){
+      console.log(data.Shoes[i]);
+      document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+    }
+  });
 }
 
 function showBoots() {
-  console.log("boots");
+  document.getElementById("content-div").innerHTML = " ";
+  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+    console.log(data.Shoes.length);
+    for(var i = 16; i < 24; i++){
+      console.log(data.Shoes[i]);
+      document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+    }
+  });
 }
 
-function showDress() {
-  console.log("dress shoes");
+function showSkate() {
+  document.getElementById("content-div").innerHTML = " ";
+  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+    console.log(data.Shoes.length);
+    for(var i = 24; i < 32; i++){
+      console.log(data.Shoes[i]);
+      document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+    }
+  });
 }
