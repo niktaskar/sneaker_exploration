@@ -2,9 +2,16 @@ $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
   console.log(data.Shoes.length);
   for(var i = 0; i < 32; i++){
     console.log(data.Shoes[i]);
-    document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+    document.getElementById("content-div").innerHTML += '<img onclick="moreInfo(' + i + ')" src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
   }
 });
+
+// function init() {
+//   gapi.client.setApiKey("AIzaSyB9xKnolfm9SuuGvC79P5poa7Ejs_zQxBM");
+//   gapi.client.load("youtube", "v3", function() {
+//
+//   }
+// }
 
 function showSneakers() {
   document.getElementById("content-div").innerHTML = " ";
@@ -12,7 +19,7 @@ function showSneakers() {
     console.log(data.Shoes.length);
     for(var i = 0; i < 8; i++){
       console.log(data.Shoes[i]);
-      document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+      document.getElementById("content-div").innerHTML += '<img onclick="moreInfo(' + data.Shoes[i] + ')" src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
     }
   });
 }
@@ -23,7 +30,7 @@ function showSandals() {
     console.log(data.Shoes.length);
     for(var i = 8; i < 16; i++){
       console.log(data.Shoes[i]);
-      document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+      document.getElementById("content-div").innerHTML += '<img onclick="moreInfo(' + data.Shoes[i] + ')" src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
     }
   });
 }
@@ -34,7 +41,7 @@ function showBoots() {
     console.log(data.Shoes.length);
     for(var i = 16; i < 24; i++){
       console.log(data.Shoes[i]);
-      document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+      document.getElementById("content-div").innerHTML += '<img onclick="moreInfo(' + data.Shoes[i] + ')" src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
     }
   });
 }
@@ -45,7 +52,16 @@ function showSkate() {
     console.log(data.Shoes.length);
     for(var i = 24; i < 32; i++){
       console.log(data.Shoes[i]);
-      document.getElementById("content-div").innerHTML += '<img src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
+      document.getElementById("content-div").innerHTML += '<img onclick="moreInfo(' + data.Shoes[i] + ')" src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
     }
+  });
+}
+
+function moreInfo(data) {
+  console.log(data);
+  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+    console.log(data.Shoes[1]);
+    console.log(typeof(data));
+    // document.getElementById("content-div").innerHTML += '<img onclick="moreInfo(' + i + ')" src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
   });
 }
