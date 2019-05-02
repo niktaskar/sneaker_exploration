@@ -1,4 +1,4 @@
-$.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+$.getJSON('https://api.myjson.com/bins/gul64', function(data) {
   console.log(data.Shoes.length);
   for(var i = 0; i < 32; i++){
     console.log(data.Shoes[i]);
@@ -15,7 +15,7 @@ $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
 
 function showAll() {
   document.getElementById("content-div").innerHTML = " ";
-  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+  $.getJSON('https://api.myjson.com/bins/gul64', function(data) {
     console.log(data.Shoes.length);
     for(var i = 0; i < 32; i++){
       console.log(data.Shoes[i]);
@@ -26,7 +26,7 @@ function showAll() {
 
 function showSneakers() {
   document.getElementById("content-div").innerHTML = " ";
-  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+  $.getJSON('https://api.myjson.com/bins/gul64', function(data) {
     console.log(data.Shoes.length);
     for(var i = 0; i < 8; i++){
       console.log(data.Shoes[i]);
@@ -37,7 +37,7 @@ function showSneakers() {
 
 function showSandals() {
   document.getElementById("content-div").innerHTML = " ";
-  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+  $.getJSON('https://api.myjson.com/bins/gul64', function(data) {
     console.log(data.Shoes.length);
     for(var i = 8; i < 16; i++){
       console.log(data.Shoes[i]);
@@ -48,7 +48,7 @@ function showSandals() {
 
 function showBoots() {
   document.getElementById("content-div").innerHTML = " ";
-  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+  $.getJSON('https://api.myjson.com/bins/gul64', function(data) {
     console.log(data.Shoes.length);
     for(var i = 16; i < 24; i++){
       console.log(data.Shoes[i]);
@@ -59,7 +59,7 @@ function showBoots() {
 
 function showSkate() {
   document.getElementById("content-div").innerHTML = " ";
-  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+  $.getJSON('https://api.myjson.com/bins/gul64', function(data) {
     console.log(data.Shoes.length);
     for(var i = 24; i < 32; i++){
       console.log(data.Shoes[i]);
@@ -70,7 +70,7 @@ function showSkate() {
 
 function moreInfo(data) {
   console.log(data);
-  $.getJSON('https://api.myjson.com/bins/1cebo0', function(data) {
+  $.getJSON('https://api.myjson.com/bins/gul64', function(data) {
     console.log(data.Shoes[1]);
     console.log(typeof(data));
     // document.getElementById("content-div").innerHTML += '<img onclick="moreInfo(' + i + ')" src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
