@@ -1,13 +1,3 @@
-// $.getJSON('https://api.myjson.com/bins/gul64', function (data) {
-//     for (var i = 0; i < 32; i++) {
-//         // document.getElementById("content-div").innerHTML += '<img id="' + i + '" src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">'
-//         // document.getElementById(i).addEventListener("click", moreInfo());
-//         document.getElementById("content-div").innerHTML += '<img class="listImg" onclick="moreInfo(' + i + ')" src="' + data.Shoes[i].id + '.jpg" alt="' + data.Shoes[i].name + '">';
-//     }
-// });
-
-//AIzaSyDiSNpVFbmMh88aexS32k9Qj6vFJ4gDdlg
-
 function showAll() {
     document.getElementById("content-div").innerHTML = " ";
     $.getJSON('https://api.myjson.com/bins/gul64', function (data) {
@@ -66,33 +56,8 @@ function moreInfo(d) {
         document.getElementById("content-div").append(div);
 
         searchAPI(data.Shoes[d].name);
-        // loadClient();
-        // // execute(data.Shoes[d].name);
     });
 }
-
-// function loadClient() {
-//     gapi.client.setApiKey("AIzaSyB9xKnolfm9SuuGvC79P5poa7Ejs_zQxBM");
-//     gapi.client.load("youtube", "v3", function(){
-//         console.log("loaded API");
-//     })
-
-// }
-
-// // Make sure the client is loaded before calling this method.
-// function execute(query) {
-//     return gapi.client.youtube.search.list({
-//         "part": "snippet",
-//         "maxResults": 25,
-//         "q": query
-//     })
-//         .then(function (response) {
-//             // Handle the results here (response.result has the parsed body).
-//             console.log("Response", response);
-//         },
-//             function (err) { console.error("Execute error", err); });
-// }
-// gapi.load("client");
 
 showAll();
 
