@@ -60,7 +60,10 @@ function moreInfo(d) {
         document.getElementById("content-div").innerHTML += '<img class="moreInfoImg" src="' + data.Shoes[d].id + '.jpg" alt="' + data.Shoes[d].name + '">';
         document.getElementById("content-div").innerHTML += '<p class="shoePrice">$' + data.Shoes[d].price + '</p>';
         document.getElementById("content-div").innerHTML += '<p class="shoeDesc">' + data.Shoes[d].description + '</p>';
-        document.getElementById("content-div").append(document.createElement("div").setAttribute("class", "querty").setAttribute("id", "query-div"));
+        var div = document.createElement("div");
+        div.setAttribute("class", "query");
+        div.setAttribute("id", "query-div")
+        document.getElementById("content-div").append(div);
 
         searchAPI(data.Shoes[d].name);
         // loadClient();
@@ -115,10 +118,22 @@ function searchAPI(q) {
                 div.setAttribute("id", i);
 
                 var link = document.createElement("a");
+                link.setAttribute("class", "searchResults");
                 link.setAttribute("href", res[i].link);
                 link.innerText = res[i].title;
 
+                var bold = document.createElement("strong");
+                bold.setAttribute("class", "searchResults");
+                bold.innerText = res[i].title;
+
+                var desc = document.createElement("p");
+                desc.setAttribute("class", "searchResults");
+                desc.innerText = res[i].snippet;
+
                 div.append(link);
+                div.append(bold);
+                div.append(desc);
+
                 document.getElementById("query-div").append(div);
             }
         }, function (reason) {
