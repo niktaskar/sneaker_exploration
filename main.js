@@ -123,16 +123,16 @@ function searchAPI(q) {
                 link.innerText = res[i].title;
 
                 var bold = document.createElement("strong");
-                bold.setAttribute("class", "searchResults");
+                bold.setAttribute("class", "searchResultsBold");
                 bold.innerText = res[i].title;
 
                 var desc = document.createElement("p");
                 desc.setAttribute("class", "searchResults");
                 desc.innerText = res[i].snippet;
 
-                div.append(link);
-                div.append(document.createElement("br"));
                 div.append(bold);
+                div.append(document.createElement("br"));
+                div.append(link);
                 div.append(document.createElement("br"));
                 div.append(desc);
 

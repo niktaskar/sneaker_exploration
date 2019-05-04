@@ -74,3 +74,7 @@ a{
 .searchResults {
     font-size: 16px;
 }
+
+.searchResultsBold{
+    font-size: 20px;
+}
