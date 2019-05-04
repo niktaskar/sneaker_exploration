@@ -101,7 +101,7 @@ function start() {
     }).then(function () {
         // 3. Initialize and make the API request.
         return gapi.client.request({
-            'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names',
+            'path': 'https://people.googleapis.com/v1/',
         })
     }).then(function (response) {
         console.log(response.result);
