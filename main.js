@@ -108,7 +108,7 @@ function searchAPI(q) {
         }).then(function (response) {
             console.log(response.result);
             var res = response.result.items;
-            for (var i = 0; i < res.length(); i++) {
+            for (var i = 0; i < res.length; i++) {
                 var div = document.createElement("div").setAttribute("id", i);
                 var link = document.createElement("a").setAttribute("href", res[i].link);
                 link.innerText = res[i].title;
