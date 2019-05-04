@@ -105,6 +105,8 @@ function start() {
         })
     }).then(function (response) {
         console.log(response.result);
+        console.log(response.result.length);
+        // for(var i = )
     }, function (reason) {
         console.log('Error: ' + reason.result.error.message);
     });
