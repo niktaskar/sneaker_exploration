@@ -73,6 +73,7 @@ a{
 
 .searchResults {
     font-size: 16px;
+    color: blue;
 }
 
 .searchResultsBold{
@@ -81,4 +82,8 @@ a{
 
 #searchHeader {
     text-align: center;
+}
+
+.query {
+  border: 1px solid black;
 }
