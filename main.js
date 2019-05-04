@@ -131,10 +131,13 @@ function searchAPI(q) {
                 desc.innerText = res[i].snippet;
 
                 div.append(link);
+                div.append(document.createElement("br"));
                 div.append(bold);
+                div.append(document.createElement("br"));
                 div.append(desc);
 
                 document.getElementById("query-div").append(div);
+                document.getElementById("query-div").append(document.createElement("hr"));
             }
         }, function (reason) {
             console.log('Error: ' + reason.result.error.message);
