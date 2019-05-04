@@ -91,7 +91,7 @@ function moreInfo(d) {
 
 showAll();
 
-function query(q) {
+function query() {
     // 2. Initialize the JavaScript client library.
     gapi.client.init({
         'apiKey': 'AIzaSyDiSNpVFbmMh88aexS32k9Qj6vFJ4gDdlg'
@@ -101,23 +101,23 @@ function query(q) {
     }).then(function () {
         // 3. Initialize and make the API request.
         return gapi.client.request({
-            'path': 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDiSNpVFbmMh88aexS32k9Qj6vFJ4gDdlg&cx=007248899485392168599:63b2p03bdio&q=' + q,
+            'path': 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDiSNpVFbmMh88aexS32k9Qj6vFJ4gDdlg&cx=007248899485392168599:63b2p03bdio&q=' + "soccer",
         })
     }).then(function (response) {
         console.log(response.result);
-        var res = response.result.items;
-        for(var i = 0; i < res.length(); i++){
-            var div = document.createElement("div").setAttribute("id", i);
-            var link = document.createElement("a").setAttribute("href", res[i].link);
-            link.innerText = res[i].title;
-            div.append(link);
-            document.getElementById("query-div").append(div);
-        }
+        // var res = response.result.items;
+        // for(var i = 0; i < res.length(); i++){
+        //     var div = document.createElement("div").setAttribute("id", i);
+        //     var link = document.createElement("a").setAttribute("href", res[i].link);
+        //     link.innerText = res[i].title;
+        //     div.append(link);
+        //     document.getElementById("query-div").append(div);
+        // }
     }, function (reason) {
         console.log('Error: ' + reason.result.error.message);
     });
 };
 // 1. Load the JavaScript client library.
 
-gapi.load('client', query("soccer"));
+gapi.load('client', query);
 
