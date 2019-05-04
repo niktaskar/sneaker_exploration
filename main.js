@@ -126,6 +126,7 @@ function searchAPI(q) {
                 link.setAttribute("class", "searchResults");
                 link.setAttribute("href", res[i].link);
                 link.innerText = res[i].title;
+                link.setAttribute("color", "blue");
 
                 var bold = document.createElement("strong");
                 bold.setAttribute("class", "searchResultsBold");
@@ -152,4 +153,3 @@ function searchAPI(q) {
 
     gapi.load('client', query);
 }
-
