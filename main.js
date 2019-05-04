@@ -101,7 +101,7 @@ function start() {
     }).then(function () {
         // 3. Initialize and make the API request.
         return gapi.client.request({
-            'path': 'https://people.googleapis.com/v1/',
+            'path': 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDiSNpVFbmMh88aexS32k9Qj6vFJ4gDdlg&cx=007248899485392168599:63b2p03bdio&q=' + "soccer",
         })
     }).then(function (response) {
         console.log(response.result);
