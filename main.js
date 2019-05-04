@@ -109,9 +109,13 @@ function searchAPI(q) {
             console.log(response.result);
             var res = response.result.items;
             for (var i = 0; i < res.length; i++) {
-                var div = document.createElement("div").setAttribute("id", i);
-                var link = document.createElement("a").setAttribute("href", res[i].link);
+                var div = document.createElement("div");
+                div.setAttribute("id", i);
+
+                var link = document.createElement("a");
+                link.setAttribute("href", res[i].link);
                 link.innerText = res[i].title;
+                
                 div.append(link);
                 document.getElementById("query-div").append(div);
             }
