@@ -78,3 +78,7 @@ a{
 .searchResultsBold{
     font-size: 20px;
 }
+
+#searchHeader {
+    text-align: center;
+}

@@ -113,6 +113,11 @@ function searchAPI(q) {
         }).then(function (response) {
             console.log(response.result);
             var res = response.result.items;
+            var searchHeader = document.createElement("h3");
+            searchHeader.innerText = "Google Search Results";
+            searchHeader.setAttribute("id", "searchHeader");
+            document.getElementById("query-div").append(document.createElement("hr"));
+            document.getElementById("query-div").append(searchHeader);
             for (var i = 0; i < res.length; i++) {
                 var div = document.createElement("div");
                 div.setAttribute("id", i);
