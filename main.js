@@ -91,7 +91,7 @@ function moreInfo(d) {
 
 showAll();
 
-function start() {
+function query(q) {
     // 2. Initialize the JavaScript client library.
     gapi.client.init({
         'apiKey': 'AIzaSyDiSNpVFbmMh88aexS32k9Qj6vFJ4gDdlg'
@@ -101,16 +101,23 @@ function start() {
     }).then(function () {
         // 3. Initialize and make the API request.
         return gapi.client.request({
-            'path': 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDiSNpVFbmMh88aexS32k9Qj6vFJ4gDdlg&cx=007248899485392168599:63b2p03bdio&q=' + "soccer",
+            'path': 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDiSNpVFbmMh88aexS32k9Qj6vFJ4gDdlg&cx=007248899485392168599:63b2p03bdio&q=' + q,
         })
     }).then(function (response) {
         console.log(response.result);
-        console.log(response.result.length);
-        // for(var i = )
+        var res = response.result.items;
+        for(var i = 0; i < res.length(); i++){
+            var div = document.createElement("div").setAttribute("id", i);
+            var link = document.createElement("a").setAttribute("href", res[i].link);
+            link.innerText = res[i].title;
+            div.append(link);
+            document.getElementById("query-div").append(div);
+        }
     }, function (reason) {
         console.log('Error: ' + reason.result.error.message);
     });
 };
 // 1. Load the JavaScript client library.
-gapi.load('client', start);
+
+gapi.load('client', query("soccer"));
 
